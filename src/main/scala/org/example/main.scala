@@ -31,7 +31,7 @@ object main{
   }
 
   def transformLogic(fid: flightInputData): flightOutputData = {
-    val res = (fid.arrivalTime - fid.departureTime)
+    val res = (fid.arrivalTime - fid.departureTime) / 60 / 60
     return flightOutputData(fid.flightName, s"$res hrs")
   }
 }
